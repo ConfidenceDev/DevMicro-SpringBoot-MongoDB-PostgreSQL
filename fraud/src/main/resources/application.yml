@@ -1,0 +1,12 @@
+server:
+  port: 8081
+  error:
+    include-binding-errors: always
+    include-message: always
+
+spring:
+  application:
+    name: fraud
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/micro_fraud

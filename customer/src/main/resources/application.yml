@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  error:
+    include-binding-errors: always
+    include-message: always
+
+spring:
+  application:
+    name: customer
+
+app:
+  datasource:
+    main:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/micro_customer
+      username: postgres
+      password: "root"
+      pool-size: 30
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: "true"
+      hibernate:
+        ddl-auto: create-drop
+      show-sql: "true"
